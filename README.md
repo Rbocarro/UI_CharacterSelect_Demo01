@@ -1,9 +1,9 @@
 
 # Character Selection Demo
 ![](./ReadmeAssets/UIDemo_01.png)
-For this project, I decided to create a character selection UI demo for a hypothetical multiplayer game inspired by titles such as Marvel Rivals and Valorant. As a programmer, my goal was to implement as many of the UI animations and shaders as possible procedurally using tweens and Unity's Shader Graph, rather than relying on traditional keyframing, external animation tools or prerendered static backgrounds. This approach allowed greater flexibility, easier iteration, and more dynamic control over Shaders,UI transitions, and interactions directly through code.
+For this project, I decided to create a character selection UI demo for a hypothetical multiplayer game inspired by titles such as Marvel Rivals and Valorant. As a programmer, my goal was to implement as many of the UI animations and shaders as possible procedurally using tweens and Unity's Shader Graph, rather than relying on traditional keyframing, external animation tools or prerendered static backgrounds. This approach allowed greater flexibility and more dynamic control over Shaders,UI transitions and interactions directly through code and the Unity Editor.
 
-# Project Web Demo
+# Web Demo
 [Web Demo- PC recommended](https://rbocarro.github.io/UIDemo02/)
 
 # Tools Used
@@ -16,7 +16,7 @@ This project untilises PrimeTween for handling all UI animations and transitions
 
 
 ## ScriptableObject
-![](./ReadmeAssets/ScriptableObject.png)
+![](./ReadmeAssets/ScriptableObject.png)<br/>
 Unity’s ScriptableObject system was used to manage character data, including abilities, artwork, and profile information. This allows game designers to create and modify character data directly in the Unity Editor without altering code, promoting a clear separation between data and logic, making the system highly extensible and designer-friendly.
 
 ## Shader Graph
