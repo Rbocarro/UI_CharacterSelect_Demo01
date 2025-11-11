@@ -9,7 +9,7 @@ For this project, I decided to create a character selection UI demo for a hypoth
 # Tools Used
 
 ## PrimeTween
-![](./ReadmeAssets/PrimeTween01.gif)
+![](./ReadmeAssets/PrimeTween01.gif)<br/>
 This project untilises PrimeTween for handling all UI animations and transitions. I evaluated it against other tweening libraries such as DOTween, LeanTween and found PrimeTween to offer better performance. It allows for  easy chaining of tweens and sequencing of animations without additional overhead. 
 
 #### Link:
@@ -26,8 +26,8 @@ I used Unity’s Shader Graph to create the  scrolling background featured in th
 
 
 ## AudioManager
-![](./ReadmeAssets/AudioManager.png)
-I implemented a static AudioManager in Unity to handle sound playback. The system is based on Brackeys’ Audio Manager tutorial but improved for efficiency by using aa Dictionary lookup to access audio clips instead of relying on FindObjectOfType, which performs a linear search.The AudioManager supports a tag-based sound classification system, allowing sounds to be grouped into categories such as Music or SFX. This enables fine-grained control over audio attributes like volume and mixing, both globally and per category. 
+![](./ReadmeAssets/AudioManager.png)<br/>
+I implemented a static AudioManager in Unity to handle sound playback. The system is based on Brackeys’ Audio Manager tutorial but improved for efficiency by using a Dictionary lookup to access audio clips instead of relying on FindObjectOfType, which performs a linear search.The AudioManager supports a tag-based sound classification system, allowing sounds to be grouped into categories such as Music or SFX. This enables fine-grained control over audio attributes like volume and mixing, both globally and per category. 
 
 ## Improvements
 If given more time, This project could benefit from improvements such as cleaning up code structure to improve readability and better compartmentalised functions.
