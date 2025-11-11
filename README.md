@@ -1,36 +1,21 @@
 
 # Take Home Task
 
-In this project I was tasked with developing a series of small demos consisting of procedural 3D mesh generation, animation, interaction with optional VR integration.
+For this Project, I set decided to make a UI character selection demo for a concept of a multiplayer game inspired by games such as Marvel Rivals and Valorant, being mainly a programmer, i wanted to implement as much of the UI animations as i could procedurally as opposed to keyframing and animation UI elements using external tools like
 
-# Project Video Demonstration
+# Project Web Demo
 [VR Implementation- Youtube](https://www.youtube.com/watch?v=vpM1LpFZr8U)
 
 [Non-VR Implementation- Youtube](https://www.youtube.com/watch?v=CG_MMXy7GYk)
 
 
-# Setup Instructions
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Rbocarro/VR_TakeHome_RB
-
-   ```
-2. Open the project in Unity **6000.0.33f1** or later with URP enabled
-3. If there are any package dependency issues, Ensure the [Unity VR Featureset](https://docs.unity3d.com/6000.0/Documentation/Manual/VRFeature.html) is installed from Package Manager > Unity Registry > VR, and click install. This should install the XR Interaction Toolkit, OpenXR plugin, Oculus XR Plugin and any other related dependancies.
-4. To Try the non VR demo Load the scene in: Assets/Scenes/DemoScene.unity
-5. To Try the  VR demo Load the scene in: Assets/Scenes/DemoScene_VR.unity
-5. Ensure a Compatible Quest VR headset and controllers are connected when playtesting the VR Scene.
-
-> [!IMPORTANT]
-> There may be an Error message(Unable to start Oculus XR Plugin) when attempting to playtest the Non VR scene or attempting to playtest the VR scene without a headset connected. This message can be ingnored when playtesting the Non VR scene as the headset is not required. For playtesting the VR scene, please ensure a compatible headset is connected.
-
-# Implementation
+# Tools Used
 
 This project was built in Unity 6 using URP with the Occulus XR plugin and XR interaction toolkit which comes with an XR rig prefab.
 The core functionality consists of a DemoManager component attached to the XR rig which controls all of the individual demo components using coroutines or toggling individual components when needed. VR interactions were tested using an Occulus Quest 2. Parameters of each indivdual demo can be tweaked either in the Inspector at the DemoManager component or using the UI panel attached to the left controller.
 
-## Procedural Mesh Creation
+## PrimeTween
 This script procedurally generates a UV sphere gameobject(Object A) and a cone mesh as its child pointing in the forward direction. It creates vertices and triangles based on configurable parameters found in the inspector such as resolution and size and assigns it a red material.
 
 #### References used:
@@ -75,7 +60,7 @@ This script allows VR object attraction toward the user's left and right control
 ## Improvements
 If given more time, This project could benefit from improvements such as cleaning up code structure to improve readability and better compartmentalised functions.
 
-+ The Procedural mesh generation only generates a UV sphere mesh which has uneven vetex distribution near the poles. there are other sphere apporximation meshes such as Icospheres and Cube spheres that can be implemented.
++ Calculation of Simplex noise is expensive, especially in 3 dimensions so steps could be made to reduce computation reqirement such as using a prerendered video of the noise animation.
 + The vetrex displacement can be implmented in a vertex shader which can offload the calculations to the GPU allowing for better perfromance. Additionally Using a precalculated Perlin Noise texture can also allow for a performance improvement especially on VR devices.
 
 
