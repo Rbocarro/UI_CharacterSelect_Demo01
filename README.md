@@ -21,7 +21,7 @@ Unity’s ScriptableObject system was used to manage character data, including a
 
 ## Shader Graph
 ![](./ReadmeAssets/shaderGraph01.png)
-sdfsfsf aedfasd
+I used Unity’s Shader Graph to create the  scrolling background featured in the demo. The animated dot pattern is achieved through UV tiling and time-based displacement, which is then masked using an animated Simplex Noise node. A clipping threshold controls the visibility of the dots within the noise mask, producing a dynamic, organic motion effect. The grid overlay is animated in a similar manner, utilizing UV tiling and displacement.
 
 ## Improvements
 If given more time, This project could benefit from improvements such as cleaning up code structure to improve readability and better compartmentalised functions.
