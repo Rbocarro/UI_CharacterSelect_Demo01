@@ -9,6 +9,7 @@ For this project, I decided to create a character selection UI demo for a hypoth
 # Tools Used
 
 ## PrimeTween
+![](./ReadmeAssets/PrimeTween01.gif)
 This project untilises PrimeTween for handling all UI animations and transitions. I evaluated it against other tweening libraries such as DOTween, LeanTween and found PrimeTween to offer better performance. It allows for  easy chaining of tweens and sequencing of animations without additional overhead. 
 
 #### Link:
@@ -20,8 +21,13 @@ This project untilises PrimeTween for handling all UI animations and transitions
 Unity’s ScriptableObject system was used to manage character data, including abilities, artwork, and profile information. This allows game designers to create and modify character data directly in the Unity Editor without altering code, promoting a clear separation between data and logic, making the system highly extensible and designer-friendly.
 
 ## Shader Graph
-![](./ReadmeAssets/shaderGraph01.png)
+![](./ReadmeAssets/shaderGraph01.png)![](./ReadmeAssets/ShaderGraph02.gif)
 I used Unity’s Shader Graph to create the  scrolling background featured in the demo. The animated dot pattern is achieved through UV tiling and time-based displacement, which is then masked using an animated Simplex Noise node. A clipping threshold controls the visibility of the dots within the noise mask, producing a dynamic, organic motion effect. The grid overlay is animated in a similar manner, utilizing UV tiling and displacement.
+
+
+## AudioManager
+![](./ReadmeAssets/AudioManager.png)
+I implemented a static AudioManager in Unity to handle sound playback. The system is based on Brackeys’ Audio Manager tutorial but improved for efficiency by using aa Dictionary lookup to access audio clips instead of relying on FindObjectOfType, which performs a linear search.The AudioManager supports a tag-based sound classification system, allowing sounds to be grouped into categories such as Music or SFX. This enables fine-grained control over audio attributes like volume and mixing, both globally and per category. 
 
 ## Improvements
 If given more time, This project could benefit from improvements such as cleaning up code structure to improve readability and better compartmentalised functions.
