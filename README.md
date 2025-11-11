@@ -1,14 +1,12 @@
 
 # Character Selection Demo
 ![](./ReadmeAssets/UIDemo_01.png)
-For this Project, I set decided to make a UI character selection demo for a concept of a multiplayer game inspired by games such as Marvel Rivals and Valorant, being mainly a programmer, i wanted to implement as much of the UI animations as i could procedurally as opposed to keyframing and animation UI elements using external tools like
+For this project, I decided to create a character selection UI demo for a hypothetical multiplayer game inspired by titles such as Marvel Rivals and Valorant. As a programmer, my goal was to implement as many of the UI animations and shaders as possible procedurally using tweens and Unity's Shader Graph, rather than relying on traditional keyframing, external animation tools or prerendered static backgrounds. This approach allowed greater flexibility, easier iteration, and more dynamic control over Shaders,UI transitions, and interactions directly through code.
 
 # Project Web Demo
 [Web Demo- PC recommended](https://rbocarro.github.io/UIDemo02/)
 
-
 # Tools Used
-
 
 ## PrimeTween
 This project untilises PrimeTween for handling all UI animations and transitions. I evaluated it against other tweening libraries such as DOTween, LeanTween and found PrimeTween to offer better performance. It allows for  easy chaining of tweens and sequencing of animations without additional overhead. 
@@ -23,8 +21,7 @@ Unity’s ScriptableObject system was used to manage character data, including a
 
 ## Shader Graph
 ![](./ReadmeAssets/shaderGraph01.png)
-.
-
+sdfsfsf aedfasd
 
 ## Improvements
 If given more time, This project could benefit from improvements such as cleaning up code structure to improve readability and better compartmentalised functions.
