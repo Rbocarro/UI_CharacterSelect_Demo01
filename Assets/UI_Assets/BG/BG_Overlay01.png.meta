@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: d32b48594c0e97d47a3e50ae9e9a2090
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7652519547019295069
+    second: BG_Overlay01_0
+  - first:
+      213: -2705042752616487358
+    second: BG_Overlay01_1
+  - first:
+      213: 4714750991006773107
+    second: BG_Overlay01_2
+  - first:
+      213: -5729376111132878203
+    second: BG_Overlay01_3
+  - first:
+      213: 3459468199514774059
+    second: BG_Overlay01_4
+  - first:
+      213: 1204980122572544893
+    second: BG_Overlay01_5
+  - first:
+      213: 293265335760085360
+    second: BG_Overlay01_6
+  - first:
+      213: -4673426833251140160
+    second: BG_Overlay01_7
+  - first:
+      213: 8834734487280901458
+    second: BG_Overlay01_8
+  - first:
+      213: 6111871069712616238
+    second: BG_Overlay01_9
+  - first:
+      213: -7901451340910154148
+    second: BG_Overlay01_10
+  - first:
+      213: -3101099619894047006
+    second: BG_Overlay01_11
+  - first:
+      213: -1441897916716044914
+    second: BG_Overlay01_12
+  - first:
+      213: -6600470636053403394
+    second: BG_Overlay01_13
+  - first:
+      213: 6592768503600613657
+    second: BG_Overlay01_14
+  - first:
+      213: 3394529720126150662
+    second: BG_Overlay01_15
+  - first:
+      213: 273148935780434621
+    second: BG_Overlay01_16
+  - first:
+      213: 5519162730199701029
+    second: BG_Overlay01_17
+  - first:
+      213: -8197867290981203199
+    second: BG_Overlay01_18
+  - first:
+      213: 1548153193348282442
+    second: BG_Overlay01_19
+  - first:
+      213: -7365305220060865622
+    second: BG_Overlay01_20
+  - first:
+      213: 2052534293549283176
+    second: BG_Overlay01_21
+  - first:
+      213: -1750123172575951557
+    second: BG_Overlay01_22
+  - first:
+      213: 493315860414222516
+    second: BG_Overlay01_23
+  - first:
+      213: 6084569406496909822
+    second: BG_Overlay01_24
+  - first:
+      213: 8779121624012537905
+    second: BG_Overlay01_25
+  - first:
+      213: 7651769646573271378
+    second: BG_Overlay01_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BG_Overlay01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 992
+        width: 779
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5971d4bbf5333a60800000000000000
+      internalID: 7652519547019295069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_1
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 1030
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246ac0cc2f1c57ad0800000000000000
+      internalID: -2705042752616487358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_2
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 1030
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f2167eb092e6140800000000000000
+      internalID: 4714750991006773107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_3
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 1030
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ad05f48ca2d70b0800000000000000
+      internalID: -5729376111132878203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_4
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1030
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a96d79fff720030800000000000000
+      internalID: 3459468199514774059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_5
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1030
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7bd7578903f8b010800000000000000
+      internalID: 1204980122572544893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_6
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 1011
+        width: 392
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0716ae2e443e11400800000000000000
+      internalID: 293265335760085360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_7
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 767
+        width: 832
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd79485e07a42fb0800000000000000
+      internalID: -4673426833251140160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_8
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 553
+        width: 524
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d554f25384b9a70800000000000000
+      internalID: 8834734487280901458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_9
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 65
+        width: 840
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b05371b5ab1d450800000000000000
+      internalID: 6111871069712616238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_10
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 0
+        width: 330
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e240f7ed7685290800000000000000
+      internalID: -7901451340910154148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_11
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 15
+        width: 237
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eecd17735ea6f4d0800000000000000
+      internalID: -3101099619894047006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_12
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 15
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8da3c7fb795dfbe0800000000000000
+      internalID: -1441897916716044914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_13
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 15
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8e3a36dea6664a0800000000000000
+      internalID: -6600470636053403394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_14
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 15
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9198f7726083e7b50800000000000000
+      internalID: 6592768503600613657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_15
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 15
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60810a3abcacb1f20800000000000000
+      internalID: 3394529720126150662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_16
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 15
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db208f7828b6ac300800000000000000
+      internalID: 273148935780434621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_17
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 15
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526d027e241089c40800000000000000
+      internalID: 5519162730199701029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_18
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 15
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103854d02235b3e80800000000000000
+      internalID: -8197867290981203199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_19
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 15
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48396b70252c7510800000000000000
+      internalID: 1548153193348282442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_20
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 15
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab11f7eced29c990800000000000000
+      internalID: -7365305220060865622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_21
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 15
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867ff40b0111c7c10800000000000000
+      internalID: 2052534293549283176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_22
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 15
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b354e614f3056b7e0800000000000000
+      internalID: -1750123172575951557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_23
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 15
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b05e0e492c98d600800000000000000
+      internalID: 493315860414222516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_24
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 15
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9257543abb07450800000000000000
+      internalID: 6084569406496909822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_25
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 15
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130c73f6a94b5d970800000000000000
+      internalID: 8779121624012537905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Overlay01_26
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 15
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259bd17e3fb803a60800000000000000
+      internalID: 7651769646573271378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BG_Overlay01_0: 7652519547019295069
+      BG_Overlay01_1: -2705042752616487358
+      BG_Overlay01_10: -7901451340910154148
+      BG_Overlay01_11: -3101099619894047006
+      BG_Overlay01_12: -1441897916716044914
+      BG_Overlay01_13: -6600470636053403394
+      BG_Overlay01_14: 6592768503600613657
+      BG_Overlay01_15: 3394529720126150662
+      BG_Overlay01_16: 273148935780434621
+      BG_Overlay01_17: 5519162730199701029
+      BG_Overlay01_18: -8197867290981203199
+      BG_Overlay01_19: 1548153193348282442
+      BG_Overlay01_2: 4714750991006773107
+      BG_Overlay01_20: -7365305220060865622
+      BG_Overlay01_21: 2052534293549283176
+      BG_Overlay01_22: -1750123172575951557
+      BG_Overlay01_23: 493315860414222516
+      BG_Overlay01_24: 6084569406496909822
+      BG_Overlay01_25: 8779121624012537905
+      BG_Overlay01_26: 7651769646573271378
+      BG_Overlay01_3: -5729376111132878203
+      BG_Overlay01_4: 3459468199514774059
+      BG_Overlay01_5: 1204980122572544893
+      BG_Overlay01_6: 293265335760085360
+      BG_Overlay01_7: -4673426833251140160
+      BG_Overlay01_8: 8834734487280901458
+      BG_Overlay01_9: 6111871069712616238
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

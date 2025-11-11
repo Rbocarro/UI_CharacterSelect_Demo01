@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8476904ac69855f4a83c58defca9822a, type: 3}
+  m_Name: Orbital Strike
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityData
+  abilityName: Orbital Strike
+  description: Calls in a satellite orbital strike on a given area
+  icon: {fileID: 2685240778421856877, guid: 17c8945e253b43b4cb99458119f9b865, type: 3}

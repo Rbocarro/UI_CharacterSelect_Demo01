@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8476904ac69855f4a83c58defca9822a, type: 3}
+  m_Name: Ignorance is Bliss
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityData
+  abilityName: Ignorance is Bliss
+  description: Negate all incoming damage from 1 player for 3s
+  icon: {fileID: -8163453087507252029, guid: e80689e00ebd5f04d978777b4cf05bfe, type: 3}
