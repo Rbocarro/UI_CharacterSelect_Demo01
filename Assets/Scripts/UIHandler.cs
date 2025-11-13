@@ -4,14 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Coffee.UIEffects;
 
 public class UIHandler : MonoBehaviour
 {
     public Image agentCutout;
     private CanvasGroup canvasGroup;
-    public float cutoutFadeDuration = 1f;
-    public float cutoutMoveDistanceX = 200f; // Distance to move from the left
-    private Vector2 cutoutOriginalPosition;
+    public float cutoutTransitionDuration = 1f;
 
     public AgentCharacter[] Agents;
     public static AgentCharacter currentAgent;
@@ -23,12 +22,10 @@ public class UIHandler : MonoBehaviour
     public GameObject agentAbilityPanel;
     public GameObject agentAbilityCardPrefab;
 
-    [Space]
     [Header("Info Panel")]
     public TMP_Text currentAgentName;
     public TMP_Text currentAgentDescription;
 
-    [Space]
     [Header("BG Elements")]
     public GameObject BG_ScrollingTextcurrentAgentName;
 
@@ -36,21 +33,11 @@ public class UIHandler : MonoBehaviour
 
     void Awake()
     {
-        //canvasGroup = agentCutout.GetComponent<CanvasGroup>();
-        //if (canvasGroup == null)    canvasGroup = agentCutout.gameObject.AddComponent<CanvasGroup>();
-
-        //if (Instance != null && Instance != this)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
         Instance = this;
-
     }
     void Start()
     {
         SetCurrentAgent(Agents[Random.Range(0,Agents.Length)]);
-        cutoutOriginalPosition =agentCutout.rectTransform.anchoredPosition;
 
         //INSTANTIATE CARDS
         for (int i=0;i< Agents.Length;i++)
@@ -64,43 +51,17 @@ public class UIHandler : MonoBehaviour
         AudioManager.instance.Play("UI_ambient");
 
         SelectAgentButton.onClick.AddListener(PlayMatchReadyAnimation);
-
     }
-
-    public void StartFadeIn()
+    public void StartCutoutTransition()
     {
-        //StartCoroutine(FadeInAndMove());
-    }
-
-    IEnumerator FadeInAndMove()
-    {
-        float elapsedTime = 0f;
-        Vector2 startPos = new Vector2(cutoutOriginalPosition.x - cutoutMoveDistanceX, cutoutOriginalPosition.y);
-        Vector2 targetPos = cutoutOriginalPosition;
-
-        //agentCutout.rectTransform.anchoredPosition = startPos;
-        agentCutout.rectTransform.position = startPos;
-        canvasGroup.alpha = 0f;
-
-        while (elapsedTime < cutoutFadeDuration)
-        {
-            float t = elapsedTime / cutoutFadeDuration;
-            //agentCutout.rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
-            agentCutout.rectTransform.position = Vector2.Lerp(startPos, targetPos, t);
-            canvasGroup.alpha = Mathf.Lerp(0f, 1f, t);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        //agentCutout.rectTransform.anchoredPosition = targetPos;
-        agentCutout.rectTransform.position = targetPos;
-        canvasGroup.alpha = 1f;
+        var uiEffect = agentCutout.GetComponent<UIEffect>();
+        uiEffect.transitionRate = 1f;
+        Tween.Custom(1f, 0f, cutoutTransitionDuration,v => uiEffect.transitionRate = v, Ease.Linear);
     }
     public void SetCurrentAgent(AgentCharacter agent)
     {   
         currentAgent = agent;
         agentCutout.GetComponent<Image>().sprite = currentAgent.panelTransparentArtwork;
-        //agentCutout.GetComponent<Image>().preserveAspect = true;
 
         BG_ScrollingTextcurrentAgentName.GetComponent<ScrollingText>().Text= currentAgent.name;
         this.Scramble(currentAgentDescription.text, currentAgent.description, .10f, (result) =>
@@ -119,7 +80,7 @@ public class UIHandler : MonoBehaviour
 
         SetupAgentAbilitesUI(agent);
 
-        StartFadeIn();
+        StartCutoutTransition();
         for (int i = 0; i < agentCardPanel.transform.childCount; i++) 
         {
             Transform card = agentCardPanel.transform.GetChild(i);
@@ -142,7 +103,6 @@ public class UIHandler : MonoBehaviour
             card.isSelected = true;
         }
     }
-
     void SetupAgentAbilitesUI(AgentCharacter a)
     {   
         //Clear all displayed Abilities
@@ -159,23 +119,10 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    //void //OnGUI()
-    //{
-    //    Event currentEvent = Event.current;
-    //    Vector2 mousePos = new Vector2();
-    //    mousePos.x = currentEvent.mousePosition.x;
-    //    mousePos.y = Camera.main.pixelHeight - currentEvent.mousePosition.y;
-    //    GUILayout.BeginArea(new Rect(20, 20, 250, 120));
-    //    GUI.contentColor = Color.red;
-    //    GUILayout.Label("Screen pixels: " + Camera.main.pixelWidth + ":" + Camera.main.pixelHeight);
-    //    GUILayout.Label("Mouse Screen position: " + mousePos);
-    //    GUILayout.EndArea();
-    //}
-
     void PlayMatchReadyAnimation()
     {
         AudioManager.instance.Play("UI_CardClickEnter");
-        var seq = PrimeTween.Sequence.Create();
+        var seq = Sequence.Create();
 
         seq.Chain(Tween.PositionY(agentCardPanel.transform, -200f, 0.3f, Ease.OutBounce));
         seq.Chain(Tween.PositionX(agentInfoPanel.transform, 200f, 0.3f, Ease.OutBounce));
@@ -188,5 +135,4 @@ public class UIHandler : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }); 
     }
-
 }
