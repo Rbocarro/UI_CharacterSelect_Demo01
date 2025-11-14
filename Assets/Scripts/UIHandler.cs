@@ -84,7 +84,7 @@ public class UIHandler : MonoBehaviour
         for (int i = 0; i < agentCardPanel.transform.childCount; i++) 
         {
             Transform card = agentCardPanel.transform.GetChild(i);
-            if (card.GetComponent<AgentCard>().GetAgent().name !=currentAgent.name)
+            if (card.GetComponent<AgentCard>().agent.name !=currentAgent.name)
             {
                 card.GetComponent<AgentCard>().CardImageBackground.color = card.GetComponent<AgentCard>().UnselectedColor;
             }

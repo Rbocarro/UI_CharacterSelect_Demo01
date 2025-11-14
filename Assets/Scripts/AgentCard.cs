@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 using PrimeTween;
-
 public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField]
@@ -14,10 +13,9 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public GameObject cardVisual;
     public Image gradientImage;
     public Image cardOverlay;
-    public Image cardSelectedOverlay;//TO DO
     public TMP_Text cardAgentName;
 
-    private AgentCharacter agent;
+    public AgentCharacter agent { get; set; }
     private Button button;
     private Camera mainCamera;
 
@@ -34,25 +32,20 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public float rotationSpeed;
     public float tiltAmount = 10f;
 
-    static Material sharedGradientMaterial;
     void Awake()
     {
-        SetupGradientImage();
         button = cardVisual.GetComponent<Button>();
         originalScale = cardVisual.transform.localScale;
         originalPosition = cardVisual.transform.localPosition;
         positionOffset = cardVisual.transform.localPosition + positionOffset;
-        // Add click listener
-        button.onClick.AddListener(OnButtonClick);
-        mainCamera=Camera.main;
+        button.onClick.AddListener(OnButtonClick);// Add click listener
+        mainCamera =Camera.main;
         CardImageBackground.color=UnselectedColor;
     }
-
     void Update()
     {
         if (isHovered) RotateTowardsMouse();
     }
-
     public void SetPanelAgent(AgentCharacter a)
     {
         agent = a;
@@ -69,7 +62,6 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         cardAgentName.text = string.Empty;
         cardAgentName.text = agent.name;
     }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (isHovered) return;
@@ -81,7 +73,6 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         AudioManager.instance.Play("UI_CardHoverEnter");
         
     }
-
     public void OnPointerExit(PointerEventData eventData)
     {
         if (!isHovered) return;
@@ -92,12 +83,6 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             if (Quaternion.Angle(cardVisual.transform.localRotation, Quaternion.identity) > 0.1f)
                 Tween.LocalRotation(cardVisual.transform, Vector3.zero, 0.2f, Ease.Default);
     }
-
-    public AgentCharacter GetAgent()
-    {
-        return agent;
-    }
-
     private void OnButtonClick()
     {
         UIHandler.SetCurrentAgentFromCard(agent, this);
@@ -133,22 +118,6 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             targetRotation,
             Time.deltaTime * rotationSpeed // speed
         );
-    }
-    void SetupGradientImage()
-    {
-        if (sharedGradientMaterial == null)
-        {
-            sharedGradientMaterial = new Material(Shader.Find("UI/Default"));
-            sharedGradientMaterial.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.DstColor);
-            sharedGradientMaterial.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
-            sharedGradientMaterial.SetInt("_ZWrite", 0);
-            sharedGradientMaterial.DisableKeyword("_ALPHATEST_ON");
-            sharedGradientMaterial.EnableKeyword("_ALPHABLEND_ON");
-            sharedGradientMaterial.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-            sharedGradientMaterial.renderQueue = 3000;
-        }
-
-        gradientImage.material = sharedGradientMaterial;
     }
     private void OnDestroy()
     {

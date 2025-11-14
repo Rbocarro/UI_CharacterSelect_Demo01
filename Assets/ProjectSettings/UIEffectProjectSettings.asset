@@ -38,6 +38,8 @@ ShaderVariantCollection:
         passType: 0
       - keywords: COLOR_FILTER
         passType: 0
+      - keywords: SAMPLING_BLUR_FAST
+        passType: 0
       - keywords: SAMPLING_BLUR_FAST TONE_GRAYSCALE
         passType: 0
       - keywords: TRANSITION_BLAZE
