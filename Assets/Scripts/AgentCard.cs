@@ -19,7 +19,7 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     private AgentCharacter agent;
     private Button button;
-    private Camera camera;
+    private Camera mainCamera;
 
     public float scaleMultiplier = 1.2f; // Scale increase when hovered
     public float scaleDuration = 5f; // Speed of scaling
@@ -44,36 +44,15 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         positionOffset = cardVisual.transform.localPosition + positionOffset;
         // Add click listener
         button.onClick.AddListener(OnButtonClick);
-        camera=Camera.main;
+        mainCamera=Camera.main;
         CardImageBackground.color=UnselectedColor;
     }
 
     void Update()
     {
-        if (isHovered) HandleCardHoverState();
-        else HandleCardNormalState();
+        if (isHovered) RotateTowardsMouse();
     }
 
-    void HandleCardHoverState()
-    {
-       // cardVisual.transform.localPosition = Vector3.Lerp(cardVisual.transform.localPosition, positionOffset, positionOffsetSpeed * Time.deltaTime);
-       // cardVisual.transform.localScale = Vector3.Lerp(cardVisual.transform.localScale, originalScale * scaleMultiplier, scaleSpeed * Time.deltaTime);
-        RotateTowardsMouse();
-    }
-
-    void HandleCardNormalState()
-    {
-        // Return to original scale smoothly
-        cardVisual.transform.localScale = Vector3.Lerp(cardVisual.transform.localScale, originalScale, scaleDuration * Time.deltaTime);
-       cardVisual.transform.localPosition = Vector3.Lerp(cardVisual.transform.localPosition, originalPosition, positionOffsetSpeed * Time.deltaTime);
-
-        // Reset rotation smoothly
-        cardVisual.transform.localRotation = Quaternion.Lerp(
-            cardVisual.transform.localRotation,
-            Quaternion.identity,
-            Time.deltaTime * 8f
-        );
-    }
     public void SetPanelAgent(AgentCharacter a)
     {
         agent = a;
@@ -93,21 +72,25 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (Vector3.Distance(cardVisual.transform.localPosition, originalPosition) < 0.1f)
-        {
-            isHovered = true;
-            Tween.LocalPosition(cardVisual.transform, positionOffset, .5f, Ease.OutBack);
-            Tween.PunchScale(cardVisual.transform, originalScale * scaleMultiplier, scaleDuration, 3, true, Ease.InOutBack);
-            AudioManager.instance.Play("UI_CardHoverEnter");
-        }
+        if (isHovered) return;
+        isHovered = true;
+        Tween.StopAll(cardVisual.transform);
+        
+        Tween.LocalPosition(cardVisual.transform, positionOffset, .5f, Ease.OutBack);
+        Tween.PunchScale(cardVisual.transform, originalScale * scaleMultiplier, scaleDuration, 3, true, Ease.InOutBack);
+        AudioManager.instance.Play("UI_CardHoverEnter");
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
-    {   
-
+    {
+        if (!isHovered) return;
         isHovered = false;
-       // Tween.LocalPosition(cardVisual.transform, originalPosition, .3f, Ease.Default);
-       // Tween.Scale(cardVisual.transform, Vector3.one, 0.3f, Ease.Default);
+        Tween.StopAll(cardVisual.transform);
+        Tween.LocalPosition(cardVisual.transform, originalPosition, .3f, Ease.Default);
+            if (Vector3.Magnitude(cardVisual.transform.localScale- Vector3.one)>0.1f) Tween.Scale(cardVisual.transform,Vector3.one, 0.2f,Ease.Default);
+            if (Quaternion.Angle(cardVisual.transform.localRotation, Quaternion.identity) > 0.1f)
+                Tween.LocalRotation(cardVisual.transform, Vector3.zero, 0.2f, Ease.Default);
     }
 
     public AgentCharacter GetAgent()
@@ -128,7 +111,7 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             cardVisual.transform.parent as RectTransform,
             Input.mousePosition,
-            camera,
+            mainCamera,
             out Vector2 localPoint);
 
         // Normalize to [-1, 1] range based on card size
@@ -172,13 +155,5 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         // Clean up event listeners
         if (button != null)
             button.onClick.RemoveListener(OnButtonClick);
-        // Clean up material to prevent memory leaks
-        //if (gradientImage != null && gradientImage.material != null)
-        //{
-        //    if (Application.isEditor)
-        //        DestroyImmediate(gradientImage.material);
-        //    else
-        //        Destroy(gradientImage.material);
-        //}
     }
 }

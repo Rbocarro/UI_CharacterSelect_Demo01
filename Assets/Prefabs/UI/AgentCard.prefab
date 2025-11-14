@@ -208,7 +208,7 @@ MonoBehaviour:
   cardOverlay: {fileID: 5323539740676124464}
   cardSelectedOverlay: {fileID: 7479366824946460141}
   cardAgentName: {fileID: 1155346486749174313}
-  scaleMultiplier: 0.2
+  scaleMultiplier: 0.3
   scaleDuration: 0.3
   isHovered: 0
   isSelected: 0
