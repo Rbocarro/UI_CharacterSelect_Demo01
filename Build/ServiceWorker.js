@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-UI_CharacterSelect_Demo01-1.0";
 const contentToCache = [
-    "Build/1af9b6bca3330a2f8ee594910b1653c5.loader.js",
+    "Build/bbfaa763a2ac80fe8a06db54096bbdcf.loader.js",
     "Build/f589a9d17337c7c597857e05db0c2d5d.framework.js",
-    "Build/6bd70130dbd6b1ba18262c7d1fa24719.data",
-    "Build/51cbd240c95e56af64a3fc3da672b16c.wasm",
+    "Build/cfd58d3600034cd94a8e94b2d167f3d9.data",
+    "Build/63bd7510d8ba5763052ef65ce6c83f70.wasm",
     "TemplateData/style.css"
 
 ];
