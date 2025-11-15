@@ -47,7 +47,6 @@ public class AudioManager : MonoBehaviour
         else
             Debug.LogWarning("Sound: " + name + " not found");
     }
-
     public void UpdateVolumeByType(AudioType type, float volume)
     {
         // Update global variables
@@ -66,7 +65,6 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-
     public void UpdateGlobalVolume(float volume)
     {
         globalVolume= volume;

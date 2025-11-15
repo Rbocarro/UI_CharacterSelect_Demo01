@@ -21,9 +21,9 @@ public class SettingsManager : MonoBehaviour
 
     void Start()
     {
-        InitialiseUI();
+        SetupUI();
     }
-    void InitialiseUI()
+    void SetupUI()
     {
         settingsPanelRectTransform = settingsPanel.GetComponent<RectTransform>();
         SetupVolumeSliderListener();
@@ -39,8 +39,8 @@ public class SettingsManager : MonoBehaviour
             volumeSFXSlider.value = AudioManager.instance.globalSFXVolume;
         }
         volumeGlobalSlider.onValueChanged.AddListener(OnGlobalVolumeChanged);
-        volumeMusicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
-        volumeSFXSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+        volumeMusicSlider.onValueChanged.AddListener((value)=> OnVolumeChangedByType(AudioType.Music, value));
+        volumeSFXSlider.onValueChanged.AddListener((value) => OnVolumeChangedByType(AudioType.SFX, value));
     }
     void DisableSettingsPanel()
     {
@@ -51,29 +51,26 @@ public class SettingsManager : MonoBehaviour
     void EnableSettingsPanel()
     {
         AudioManager.instance.Play("UI_CardClickEnter"); 
-        settingsPanelParent.gameObject.SetActive(true);
+        settingsPanelParent.SetActive(true);
         settingsPanelRectTransform.localScale = Vector3.zero;
-        Tween.Scale(settingsPanel.GetComponent<RectTransform>(), Vector3.one, 0.5f, Ease.InOutQuart);
+        Tween.Scale(settingsPanelRectTransform, Vector3.one, 0.5f, Ease.InOutQuart);
     }
     void OnGlobalVolumeChanged(float value)
     {
         AudioManager.instance.UpdateGlobalVolume(value);
     }
-    void OnMusicVolumeChanged(float value)
+
+    void OnVolumeChangedByType(AudioType type, float value)
     {
-        AudioManager.instance.UpdateVolumeByType(AudioType.Music, value);
-    }
-    void OnSFXVolumeChanged(float value)
-    {
-        AudioManager.instance.UpdateVolumeByType(AudioType.SFX, value);
+        AudioManager.instance.UpdateVolumeByType(type, value);
     }
     void OnDestroy()
     {
         if (volumeGlobalSlider != null) volumeGlobalSlider.onValueChanged.RemoveListener(OnGlobalVolumeChanged);
 
-        if (volumeMusicSlider != null) volumeMusicSlider.onValueChanged.RemoveListener(OnMusicVolumeChanged);
+        if (volumeMusicSlider != null) volumeMusicSlider.onValueChanged.RemoveAllListeners();
 
-        if (volumeSFXSlider != null) volumeSFXSlider.onValueChanged.RemoveListener(OnSFXVolumeChanged);
+        if (volumeSFXSlider != null) volumeSFXSlider.onValueChanged.RemoveAllListeners();
 
         if (closeSettingsButton != null) closeSettingsButton.onClick.RemoveListener(DisableSettingsPanel);
 

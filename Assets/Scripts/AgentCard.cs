@@ -90,7 +90,7 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         CardImageBackground.color=SelectedColor;
         Tween.ShakeLocalRotation(cardVisual.transform, strength: new Vector3(0, 0, 10), duration: 0.3f, frequency: 15);
     }
-    void RotateTowardsMouse()
+    void RotateTowardsMouse()//rotate card to face towards mouse when hovered over;
     {   
         // Get mouse position relative to the card
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -99,7 +99,7 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             mainCamera,
             out Vector2 localPoint);
 
-        // Normalize to [-1, 1] range based on card size
+        // Normalize to -1, 1 range based on card size
         RectTransform rect = cardVisual.transform as RectTransform;
         Vector2 normalized = new Vector2(
             Mathf.Clamp(localPoint.x / (rect.rect.width / 2f), -1f, 1f),
@@ -121,8 +121,6 @@ public class AgentCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     }
     private void OnDestroy()
     {
-        // Clean up event listeners
-        if (button != null)
-            button.onClick.RemoveListener(OnButtonClick);
+        if (button != null) button.onClick.RemoveListener(OnButtonClick);
     }
 }

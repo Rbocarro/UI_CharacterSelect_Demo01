@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class AgentAbilityUI : MonoBehaviour
 {
     public Image agentAbilityIcon;
@@ -10,12 +9,6 @@ public class AgentAbilityUI : MonoBehaviour
     public TMP_Text agentAbilityDescription;
 
     private AbilityData ability;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     public void setAgentAbility(AbilityData a)
     {
         ability = a;
@@ -25,8 +18,8 @@ public class AgentAbilityUI : MonoBehaviour
 
     private void SetagentAbilityIcon()
     {
-        agentAbilityIcon.GetComponent<Image>().sprite = ability.icon;
-        agentAbilityIcon.GetComponent<Image>().preserveAspect = true;
+        agentAbilityIcon.sprite = ability.icon;
+        agentAbilityIcon.preserveAspect = true;
     }
     private void SetagentAbilityText()
     {
