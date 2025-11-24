@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e96488f98261b24bb5baf27959f57fd, type: 3}
+  m_Name: AgentList
+  m_EditorClassIdentifier: Assembly-CSharp::AgentList
+  agentList:
+  - {fileID: 11400000, guid: 640f9249ef479b24089c68140395ee7a, type: 2}
+  - {fileID: 11400000, guid: 9e5df37f3a206004f9eecf54261d1214, type: 2}
+  - {fileID: 11400000, guid: 24a2186f777f1a84fba7de9756bc17d6, type: 2}
