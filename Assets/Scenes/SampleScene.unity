@@ -243,12 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentCutout: {fileID: 534717627}
   cutoutTransitionDuration: 0.5
-  Agents:
-  - {fileID: 11400000, guid: 24a2186f777f1a84fba7de9756bc17d6, type: 2}
-  - {fileID: 11400000, guid: c528c2cd70aeb38488473d8eb09e58b4, type: 2}
-  - {fileID: 11400000, guid: 1e82a41d73841514db832645a4f44b46, type: 2}
-  - {fileID: 11400000, guid: 640f9249ef479b24089c68140395ee7a, type: 2}
-  - {fileID: 11400000, guid: 9e5df37f3a206004f9eecf54261d1214, type: 2}
+  agentList: {fileID: 11400000, guid: e4e3feef0b8bfb74486c710c6c4ee1f6, type: 2}
   agentCardPanel: {fileID: 1005820641}
   agentCardPrefab: {fileID: 3589285199273426171, guid: 12b05516f06f42b49afca78828e19f8a, type: 3}
   agentInfoPanel: {fileID: 1245306064}
@@ -973,8 +968,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3268,7 +3263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 44.321}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150.00006, y: 2}
+  m_AnchoredPosition: {x: -149.99994, y: 2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1394184088
@@ -3458,8 +3453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -96}
-  m_SizeDelta: {x: 0, y: -256}
+  m_AnchoredPosition: {x: 27.158997, y: -52.5}
+  m_SizeDelta: {x: 4.319, y: -305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488201248
 MonoBehaviour:

@@ -1,7 +1,4 @@
 using UnityEngine;
-
-
-
 public enum AgentClass { DPS, TANK, FLANK };
 [CreateAssetMenu(fileName = "agentCharacter", menuName = "Agent/Character")]
 public class AgentCharacter : ScriptableObject
@@ -17,8 +14,4 @@ public class AgentCharacter : ScriptableObject
     public Color secondaryColor;
     public AbilityData[] abilities;
 
-    public void Print()
-    {
-        Debug.Log(name + ": " + description );
-    }
 }
