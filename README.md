@@ -9,12 +9,12 @@ For this project, I decided to create a character selection UI demo for a hypoth
 # Tools Used
 
 ## Agent Manager Editor 
-![](./ReadmeAssets/AgentManagerEditor.png)<br/>
+<img src="./ReadmeAssets/AgentManagerEditor.png" width="75%" />
 Custom Editor interface created using Unity's Editor Class which allows designers to easily create, edit and delete AgentCharacter and their linked Abilities, automatically handling file organisation and asset linking. This helps streamlines content creation, enabling faster iteration and easier data maintenance without needing to manually navigate the Project window.
 
 ## ScriptableObject
 ![](./ReadmeAssets/ScriptableObject.png)<br/>
-Unity’s ScriptableObject system was used to manage character data, including abilities, artwork, and profile information. This allows game designers to create and modify character data directly in the Unity Editor without altering code, promoting a clear separation between data and logic, making the system highly extensible and designer-friendly.
+Unity’s ScriptableObject system was used to manage character data, including abilities, artwork, and profile information. This allows game designers to create and modify character data directly in the Unity Editor if needed without altering code.
 
 ## PrimeTween
 ![](./ReadmeAssets/PrimeTween01.gif)<br/>
@@ -24,7 +24,7 @@ This project untilises PrimeTween for handling UI animations and transitions. I 
 [PrimeTween](https://github.com/KyryloKuzyk/PrimeTween)
 
 ## Shader Graph
-![](./ReadmeAssets/shaderGraph01.png)![](./ReadmeAssets/ShaderGraph02.gif)
+![](./ReadmeAssets/ShaderGraph02.gif)
 I used Unity’s Shader Graph to create the  scrolling background featured in the demo. The animated dot pattern is achieved through UV tiling and time-based displacement, which is then masked using an animated Simplex Noise node. A clipping threshold controls the visibility of the dots within the noise mask, producing a dynamic, organic motion effect. The grid overlay is animated in a similar manner, utilising UV tiling and displacement.
 
 
@@ -35,7 +35,7 @@ I implemented a static AudioManager in Unity to handle sound playback. The syste
 ## Improvements
 + Calculation of Simplex noise is expensive, especially in 3 dimensions so steps could be made to reduce computation reqirement such as using a prerendered video of the noise animation.
 
-##References
+##References<br/>
 +[Free Anime Character Art Pack - 6 by NatsuyaCharacterArt](https://assetstore.unity.com/packages/2d/characters/free-anime-character-art-pack-6-303256) - [Twitter](https://x.com/natsuyaen)
 
 
