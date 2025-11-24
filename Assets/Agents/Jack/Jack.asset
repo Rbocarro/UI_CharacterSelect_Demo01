@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AgentCharacter
   name: Jack
   description: A master of misdirection, Jack employs advanced technology to control
-    enemy sightlines, allowing him to strike from their blind spot
+    enemy sightlines, allowing him to strike from their blind spot.
   agentClass: 2
   panelArtwork: {fileID: 21300000, guid: 27d2b817adfc46b4f89f7bedeb53a942, type: 3}
   panelTransparentArtwork: {fileID: 21300000, guid: 27d2b817adfc46b4f89f7bedeb53a942, type: 3}

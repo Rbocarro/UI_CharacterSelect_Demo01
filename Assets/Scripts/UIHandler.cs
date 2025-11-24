@@ -1,10 +1,9 @@
+using Coffee.UIEffects;
 using PrimeTween;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Coffee.UIEffects;
 
 public class UIHandler : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class UIHandler : MonoBehaviour
     private CanvasGroup canvasGroup;
     public float cutoutTransitionDuration = 1f;
 
-    public AgentCharacter[] Agents;
+    public AgentList agentList;
     public static AgentCharacter currentAgent;
     public static UIHandler Instance { get; private set; }
 
@@ -37,15 +36,13 @@ public class UIHandler : MonoBehaviour
     }
     void Start()
     {
-        SetCurrentAgent(Agents[Random.Range(0,Agents.Length)]);
-
+        SetCurrentAgent(agentList.list[Random.Range(0, agentList.list.Count)]);
         //INSTANTIATE CARDS
-        for (int i=0;i< Agents.Length;i++)
+        for (int i=0;i< agentList.list.Count; i++)
         {
             GameObject card=Instantiate(agentCardPrefab, agentCardPanel.transform);
-            card.name = Agents[i].name; //set the gameobject name in the hierachy not the actual agent name
-            card.GetComponent<AgentCard>().SetPanelAgent(Agents[i]);
-            //card.GetComponentInChildren<AgentCard>().setPanelAgent(Agents[i]);
+            card.name = agentList.list[i].name; //set the gameobject name in the hierachy not the actual agent name
+            card.GetComponent<AgentCard>().SetPanelAgent(agentList.list[i]);
         }
 
         AudioManager.instance.Play("UI_ambient");

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e96488f98261b24bb5baf27959f57fd, type: 3}
   m_Name: AgentList
   m_EditorClassIdentifier: Assembly-CSharp::AgentList
-  agentList:
+  list:
   - {fileID: 11400000, guid: 640f9249ef479b24089c68140395ee7a, type: 2}
   - {fileID: 11400000, guid: 9e5df37f3a206004f9eecf54261d1214, type: 2}
+  - {fileID: 11400000, guid: c528c2cd70aeb38488473d8eb09e58b4, type: 2}
   - {fileID: 11400000, guid: 24a2186f777f1a84fba7de9756bc17d6, type: 2}
+  - {fileID: 11400000, guid: 1e82a41d73841514db832645a4f44b46, type: 2}
