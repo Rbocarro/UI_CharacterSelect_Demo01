@@ -35,8 +35,8 @@ I implemented a static AudioManager in Unity to handle sound playback. The syste
 ## Improvements
 + Calculation of Simplex noise is expensive, especially in 3 dimensions so steps could be made to reduce computation reqirement such as using a prerendered video of the noise animation.
 
-##References<br/>
-+[Free Anime Character Art Pack - 6 by NatsuyaCharacterArt](https://assetstore.unity.com/packages/2d/characters/free-anime-character-art-pack-6-303256) - [Twitter](https://x.com/natsuyaen)
+## References<br/>
++ [Free Anime Character Art Pack - 6 by NatsuyaCharacterArt](https://assetstore.unity.com/packages/2d/characters/free-anime-character-art-pack-6-303256) - [Twitter](https://x.com/natsuyaen)
 
 
 
